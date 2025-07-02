@@ -152,6 +152,18 @@
       border-radius: 8px;
       cursor: zoom-out;
     }
+
+    /* Mobile fix */
+    @media (max-width: 600px) {
+      .logo-top-left {
+        top: 10px;
+        left: 10px;
+      }
+
+      header {
+        padding-top: 120px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -203,8 +215,8 @@
   <section>
     <h2>Technical Specs</h2>
     <ul>
-	<li>6400 individually addressable LEDs</li>      
-	<li>450–500 meters of cabling</li>
+      <li>450–500 meters of cabling</li>
+      <li>6400 individually addressable LEDs</li>
       <li>Fully sound-reactive system</li>
     </ul>
   </section>
