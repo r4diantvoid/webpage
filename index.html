@@ -10,7 +10,9 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Helvetica Neue', sans-serif;
       background: #000;
@@ -18,30 +20,41 @@
       overflow-x: hidden;
     }
 
-    .logo-top-left {
+    /* NAVBAR */
+    nav {
+      width: 100%;
       position: fixed;
-      top: 20px;
-      left: 20px;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-bottom: 1px solid #333;
       z-index: 10000;
-      text-align: center;
-      line-height: 1.2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
     }
 
-    .logo-top-left .main-name {
+    .nav-logo {
       font-family: 'Metal Mania', cursive;
-      font-size: 1.8em;
+      font-size: 1.5em;
       color: #8B0000;
     }
 
-    .logo-top-left .subtitle {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 0.9em;
-      color: #888;
-      margin-top: 2px;
+    .nav-links a {
+      color: #ccc;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
     }
 
     header {
-      padding: 60px 40px 40px;
+      padding: 100px 40px 20px;
       text-align: center;
     }
 
@@ -60,10 +73,6 @@
       gap: 10px;
     }
 
-    .collab-note a {
-      display: inline-block;
-    }
-
     .collab-note img {
       height: 22px;
       vertical-align: middle;
@@ -76,17 +85,17 @@
     }
 
     .gallery {
+      margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 40px 20px 0 20px;
     }
 
     .gallery-item {
       width: 40vw;
       max-width: 600px;
-      aspect-ratio: 4/3;
+      aspect-ratio: 4 / 3;
       background-color: #111;
       overflow: hidden;
       position: relative;
@@ -110,7 +119,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.6);
       color: #fff;
       padding: 10px 20px;
       font-size: 1rem;
@@ -119,6 +128,19 @@
 
     .gallery-item:hover .caption {
       display: block;
+    }
+
+    .intro-video {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .intro-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     section {
@@ -154,15 +176,18 @@
       font-weight: bold;
       transition: background-color 0.3s;
     }
+
     .contact-button:hover {
       background-color: #444;
     }
 
     .lightbox-overlay {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.9);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -172,33 +197,40 @@
     .lightbox-overlay img {
       max-width: 90%;
       max-height: 90%;
-      box-shadow: 0 0 30px rgba(255,255,255,0.3);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
       border: 2px solid #444;
       border-radius: 8px;
       cursor: zoom-out;
     }
 
-    /* Mobile fix */
     @media (max-width: 600px) {
-      .logo-top-left {
-        top: 10px;
-        left: 10px;
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
       }
 
       header {
-        padding-top: 120px;
+        padding-top: 140px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top-left logo with subtitle -->
-  <div class="logo-top-left">
-    <div class="main-name">R4DIANT VOID</div>
-    <div class="subtitle">–Productions–</div>
-  </div>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-logo">R4DIANT VOID</div>
+    <div class="nav-links">
+      <a href="about.html">ABOUT US</a>
+      <a href="#artwork">ARTWORK</a>
+    </div>
+  </nav>
 
+  <!-- Header -->
   <header>
     <h1>THE POWER PLANT</h1>
     <div class="collab-note">
@@ -208,33 +240,43 @@
       </a>
     </div>
   </header>
-  
-  <section class="gallery">
+
+  <!-- Art Work Gallery -->
+  <section class="gallery" id="artwork">
     <div class="gallery-item">
       <a href="pp1.jpg" class="lightbox">
-        <img src="pp1.jpg" alt="Powerplant 1">
+        <img src="pp1.jpg" alt="Powerplant 1" />
       </a>
       <div class="caption">power plant by night</div>
     </div>
     <div class="gallery-item">
       <a href="pp2.jpg" class="lightbox">
-        <img src="pp2.jpg" alt="Powerplant 2">
+        <img src="pp2.jpg" alt="Powerplant 2" />
       </a>
       <div class="caption">power plant by night</div>
     </div>
     <div class="gallery-item">
       <a href="pp3.jpg" class="lightbox">
-        <img src="pp3.jpg" alt="Powerplant 3">
+        <img src="pp3.jpg" alt="Powerplant 3" />
       </a>
       <div class="caption">power plant by day</div>
     </div>
   </section>
 
+  <!-- Video Section BELOW Pictures -->
+  <section class="intro-video">
+    <video autoplay muted loop playsinline>
+      <source src="raw.gadigal_20250613.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Concept & Specs -->
   <section>
     <h2>Concept & Inspiration</h2>
     <p>
-      <strong>“Reignition” – Power Plant LED Installation Concept</strong><br>
-      Once a monument to industrial energy, the abandoned power plant becomes a living sculpture—its darkened shell reignited by thousands of pulsing LEDs. Reignition explores the tension between decay and renewal, channeling raw electricity into hypnotic patterns that respond to sound and movement.<br><br>
+      <strong>“Reignition” – Power Plant LED Installation Concept</strong><br />
+      Once a monument to industrial energy, the abandoned power plant becomes a living sculpture—its darkened shell reignited by thousands of pulsing LEDs. Reignition explores the tension between decay and renewal, channeling raw electricity into hypnotic patterns that respond to sound and movement.<br /><br />
       As the structure breathes with light, ravers move in sync—bodies, rhythm, and code merging into one collective mechanism. Energy flows through wires, sound, and living bodies alike, dissolving the boundary between human and machine. The obsolete becomes vital again—a futuristic temple where techno reclaims space through vibration and light.
     </p>
   </section>
@@ -249,7 +291,7 @@
   </section>
 
   <footer>
-    <a href="mailto:r4diant.void.au@gmail.com" class="contact-button">Get in Touch</a><br>
+    <a href="mailto:r4diant.void.au@gmail.com" class="contact-button">Get in Touch</a><br />
     &copy; 2025 R4DIANT VOID — All rights reserved
   </footer>
 
@@ -259,7 +301,7 @@
         e.preventDefault();
         const overlay = document.createElement('div');
         overlay.className = 'lightbox-overlay';
-        overlay.innerHTML = `<img src="${link.href}" alt="">`;
+        overlay.innerHTML = `<img src="${link.href}" alt="" />`;
         overlay.addEventListener('click', () => overlay.remove());
         document.body.appendChild(overlay);
       });
