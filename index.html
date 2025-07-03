@@ -133,7 +133,7 @@
     .video-container {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      padding-top: 30%; /* shorter height for wide, short video */
       margin-top: 40px;
     }
 
@@ -145,6 +145,23 @@
       height: 100%;
       object-fit: cover;
       cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .video-caption {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.9em;
+    }
+
+    .video-caption a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .video-caption a:hover {
+      color: #fff;
     }
 
     section {
@@ -220,6 +237,11 @@
       header {
         padding-top: 140px;
       }
+
+      .gallery-item {
+        width: 90vw;
+        max-width: none;
+      }
     }
   </style>
 </head>
@@ -269,10 +291,15 @@
 
   <!-- Video Section BELOW Pictures -->
   <section class="video-container">
-    <video autoplay loop playsinline controls>
+    <video autoplay muted loop playsinline>
       <source src="raw.gadigal_20250613.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
+    <div class="video-caption">
+      <a href="https://www.instagram.com/reel/DK0rW5ph9NI/?igsh=MXhvandqeDB1cTlsMw==" target="_blank" rel="noopener noreferrer">
+        ▶ Click to watch full Instagram Reel
+      </a>
+    </div>
   </section>
 
   <!-- Concept & Specs -->
