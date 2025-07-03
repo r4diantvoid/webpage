@@ -60,9 +60,19 @@
       gap: 10px;
     }
 
+    .collab-note a {
+      display: inline-block;
+    }
+
     .collab-note img {
       height: 22px;
       vertical-align: middle;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .collab-note img:hover {
+      opacity: 0.7;
     }
 
     .gallery {
@@ -133,6 +143,21 @@
       color: #aaa;
     }
 
+    .contact-button {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 12px 24px;
+      background-color: #222;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .contact-button:hover {
+      background-color: #444;
+    }
+
     .lightbox-overlay {
       position: fixed;
       top: 0; left: 0;
@@ -178,7 +203,9 @@
     <h1>THE POWER PLANT</h1>
     <div class="collab-note">
       in collaboration with
-      <img src="raw-logo.png" alt="RAW Logo">
+      <a href="https://instagram.com/raw.gadigal" target="_blank" rel="noopener noreferrer">
+        <img src="raw-logo.png" alt="RAW Logo">
+      </a>
     </div>
   </header>
   
@@ -222,6 +249,7 @@
   </section>
 
   <footer>
+    <a href="mailto:r4diant.void.au@gmail.com" class="contact-button">Get in Touch</a><br>
     &copy; 2025 R4DIANT VOID — All rights reserved
   </footer>
 
