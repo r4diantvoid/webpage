@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>THE POWER PLANT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -20,7 +20,6 @@
       overflow-x: hidden;
     }
 
-    /* NAVBAR */
     nav {
       width: 100%;
       position: fixed;
@@ -56,6 +55,8 @@
     header {
       padding: 100px 40px 20px;
       text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     header h1 {
@@ -71,6 +72,7 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
+      margin-bottom: 40px;
     }
 
     .collab-note img {
@@ -84,12 +86,77 @@
       opacity: 0.7;
     }
 
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 30%; /* short, wide aspect ratio */
+      margin-bottom: 40px;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #muteToggle {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 8px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    #muteToggle:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .video-caption {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.9em;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+    }
+
+    .video-caption a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .video-caption a:hover {
+      color: #fff;
+    }
+
     .gallery {
       margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .gallery-item {
@@ -130,42 +197,11 @@
       display: block;
     }
 
-    .video-container {
-      position: relative;
-      width: 100%;
-      padding-top: 30%; /* shorter height for wide, short video */
-      margin-top: 40px;
-    }
-
-    .video-container video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      cursor: pointer;
-      border-radius: 8px;
-    }
-
-    .video-caption {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 0.9em;
-    }
-
-    .video-caption a {
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .video-caption a:hover {
-      color: #fff;
-    }
-
     section {
       padding: 60px 40px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     section h2 {
@@ -240,7 +276,6 @@
 
       .gallery-item {
         width: 90vw;
-        max-width: none;
       }
     }
   </style>
@@ -262,10 +297,25 @@
     <div class="collab-note">
       in collaboration with
       <a href="https://instagram.com/raw.gadigal" target="_blank" rel="noopener noreferrer">
-        <img src="raw-logo.png" alt="RAW Logo">
+        <img src="raw-logo.png" alt="RAW Logo" />
       </a>
     </div>
   </header>
+
+  <!-- Video Section BELOW title and collab -->
+  <section class="video-container" aria-label="Intro video">
+    <video id="myVideo" autoplay muted loop playsinline>
+      <source src="raw.gadigal_20250613.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <button id="muteToggle" aria-label="Unmute video" title="Unmute video">🔈</button>
+  </section>
+
+  <div class="video-caption">
+    <a href="https://www.instagram.com/reel/DK0rW5ph9NI/?igsh=MXhvandqeDB1cTlsMw==" target="_blank" rel="noopener noreferrer">
+      ▶ Click to watch full Instagram Reel
+    </a>
+  </div>
 
   <!-- Art Work Gallery -->
   <section class="gallery" id="artwork">
@@ -286,19 +336,6 @@
         <img src="pp3.jpg" alt="Powerplant 3" />
       </a>
       <div class="caption">power plant by day</div>
-    </div>
-  </section>
-
-  <!-- Video Section BELOW Pictures -->
-  <section class="video-container">
-    <video autoplay muted loop playsinline>
-      <source src="raw.gadigal_20250613.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-caption">
-      <a href="https://www.instagram.com/reel/DK0rW5ph9NI/?igsh=MXhvandqeDB1cTlsMw==" target="_blank" rel="noopener noreferrer">
-        ▶ Click to watch full Instagram Reel
-      </a>
     </div>
   </section>
 
@@ -339,10 +376,22 @@
       });
     });
 
-    // Redirect to Instagram reel on video click
-    const video = document.querySelector('.video-container video');
-    video.addEventListener('click', () => {
-      window.open('https://www.instagram.com/reel/DK0rW5ph9NI/?igsh=MXhvandqeDB1cTlsMw==', '_blank');
+    // Unmute / Mute toggle
+    const video = document.getElementById('myVideo');
+    const muteToggle = document.getElementById('muteToggle');
+
+    muteToggle.addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        muteToggle.textContent = '🔊'; // Speaker with sound
+        muteToggle.title = 'Mute video';
+        muteToggle.setAttribute('aria-label', 'Mute video');
+      } else {
+        video.muted = true;
+        muteToggle.textContent = '🔈'; // Speaker muted
+        muteToggle.title = 'Unmute video';
+        muteToggle.setAttribute('aria-label', 'Unmute video');
+      }
     });
   </script>
 </body>
