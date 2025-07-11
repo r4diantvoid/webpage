@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -7,13 +7,12 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MV1ZY6YWGX');
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>THE POWER PLANT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -44,9 +43,37 @@
     }
 
     .nav-logo {
-      font-family: 'Metal Mania', cursive;
-      font-size: 1.5em;
-      color: #8B0000;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+      color: #ff0033;
+      text-shadow:
+        0 0 5px #ff0033,
+        0 0 10px #ff0033,
+        0 0 20px #8b0000,
+        0 0 40px #8b0000;
+      animation: neon-pulse 2s ease-in-out infinite alternate;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-logo:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes neon-pulse {
+      from {
+        text-shadow:
+          0 0 5px #ff0033,
+          0 0 10px #ff0033,
+          0 0 20px #8b0000,
+          0 0 40px #8b0000;
+      }
+      to {
+        text-shadow:
+          0 0 10px #ff3366,
+          0 0 20px #ff3366,
+          0 0 30px #ff0033,
+          0 0 60px #ff0033;
+      }
     }
 
     .nav-links a {
