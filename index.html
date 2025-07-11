@@ -47,10 +47,10 @@
       font-size: 1.2em;
       color: #8B0000; /* Dark red */
       text-shadow:
-        0 0 5px #8B0000,
-        0 0 10px #6E0000,
-        0 0 20px #4B0000,
-        0 0 40px #2C0000;
+        0 0 7px #8B0000,
+        0 0 14px #9F1A1A,
+        0 0 28px #B22222,
+        0 0 56px #C43030;
       animation: neon-pulse 2s ease-in-out infinite alternate;
       transition: transform 0.3s ease;
     }
@@ -62,17 +62,17 @@
     @keyframes neon-pulse {
       from {
         text-shadow:
-          0 0 5px #8B0000,
-          0 0 10px #6E0000,
-          0 0 20px #4B0000,
-          0 0 40px #2C0000;
+          0 0 7px #8B0000,
+          0 0 14px #9F1A1A,
+          0 0 28px #B22222,
+          0 0 56px #C43030;
       }
       to {
         text-shadow:
-          0 0 10px #A52A2A,
-          0 0 20px #A52A2A,
-          0 0 30px #8B0000,
-          0 0 60px #8B0000;
+          0 0 14px #A52A2A,
+          0 0 28px #B22222,
+          0 0 42px #C43030,
+          0 0 84px #D64545;
       }
     }
 
@@ -282,3 +282,46 @@
       <a href="pp2.jpg" class="lightbox">
         <img src="pp2.jpg" alt="Powerplant 2" />
       </a>
+      <div class="caption">power plant by night</div>
+    </div>
+    <div class="gallery-item">
+      <a href="pp3.jpg" class="lightbox">
+        <img src="pp3.jpg" alt="Powerplant 3" />
+      </a>
+      <div class="caption">power plant by day</div>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section>
+    <h2>Concept & Inspiration</h2>
+    <p>
+      <strong>“Reignition” – Power Plant LED Installation Concept</strong><br />
+      Once a monument to industrial energy, the abandoned power plant becomes a living sculpture—its darkened shell reignited by thousands of pulsing LEDs. Reignition explores the tension between decay and renewal, channeling raw electricity into hypnotic patterns that respond to sound and movement.<br /><br />
+      As the structure breathes with light, ravers move in sync—bodies, rhythm, and code merging into one collective mechanism. Energy flows through wires, sound, and living bodies alike, dissolving the boundary between human and machine. The obsolete becomes vital again—a futuristic temple where techno reclaims space through vibration and light.
+    </p>
+  </section>
+
+  <!-- Specs -->
+  <section>
+    <h2>Technical Specs</h2>
+    <ul>
+      <li>450–500 meters of cabling</li>
+      <li>6400 individually addressable LEDs</li>
+      <li>Fully sound-reactive system</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="mailto:r4diant.void.au@gmail.com" class="contact-button">Get in Touch</a><br />
+    &copy; 2025 R4DIANT VOID — All rights reserved
+  </footer>
+
+  <script>
+    function toggleMute() {
+      const video = document.getElementById('mainVideo');
+      video.muted = !video.muted;
+    }
+  </script>
+</body>
+</html>
