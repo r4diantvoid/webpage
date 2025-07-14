@@ -44,8 +44,18 @@
 
     .nav-logo {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.5em;
-      color: #8B0000;
+      font-size: 1.2em; /* same size as Power Plant page */
+      color: #8B0000; /* Dark red */
+      text-shadow:
+        0 0 7px #8B0000,
+        0 0 14px #9F1A1A,
+        0 0 28px #B22222,
+        0 0 56px #C43030;
+      animation: neon-pulse 1s ease-in-out infinite alternate;
+      transition: transform 0.3s ease;
+    }
+    .nav-logo:hover {
+      transform: scale(1.05);
     }
 
     .nav-links a {
