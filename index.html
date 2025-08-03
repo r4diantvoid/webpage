@@ -156,6 +156,10 @@
       transition: transform 0.4s ease;
     }
 
+    .gallery-item.portrait {
+  aspect-ratio: 3 / 4; /* vertical aspect */
+    } 
+
     .gallery-item:hover {
       transform: scale(1.02);
     }
@@ -221,6 +225,25 @@
     .contact-button:hover {
       background-color: #444;
     }
+
+    .social-icons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      opacity: 1;
+    }
+
   </style>
 </head>
 <body>
@@ -265,13 +288,14 @@
         <img src="pp2.jpg" alt="Powerplant 2" />
       </a>
       <div class="caption">power plant by night</div>
-    </div>
+      </div>
     <div class="gallery-item">
       <a href="pp3.jpg" class="lightbox">
         <img src="pp3.jpg" alt="Powerplant 3" />
       </a>
-      <div class="caption">power plant by day</div>
+    <div class="caption">power plant by day</div>
     </div>
+
   </section>
 
   <!-- Concept -->
@@ -294,10 +318,20 @@
     </ul>
   </section>
 
-  <footer>
-    <a href="mailto:r4diant.void.au@gmail.com" class="contact-button">Get in Touch</a><br />
-    &copy; 2025 R4DIANT VOID — All rights reserved
-  </footer>
+<footer>
+  <a href="mailto:r4diant.void.au@gmail.com" class="contact-button">Get in Touch</a><br />
+
+  <div class="social-icons">
+    <a href="https://instagram.com/r4diant.void" target="_blank" aria-label="Instagram">
+      <img src="instagram-icon.svg" alt="Instagram" />
+    </a>
+    <a href="mailto:r4diant.void.au@gmail.com" aria-label="Email">
+      <img src="email-icon.svg" alt="Email" />
+    </a>
+  </div>
+
+  &copy; 2025 R4DIANT VOID — All rights reserved
+</footer>
 
   <script>
     function toggleMute() {
