@@ -297,7 +297,7 @@
     </p>
   </section>
 
-  <!-- Specs -->
+ <!-- Specs -->
   <section>
     <h2>Technical Specs</h2>
     <ul>
@@ -308,6 +308,27 @@
 	<li>Compatible with Resolume and other mapping software via Artnet</li>
     </ul>
   </section>
+
+  <!-- Instagram Section -->
+<section id="instagram">
+  <h2>Further impressions</h2>
+  <blockquote class="instagram-media"
+    data-instgrm-permalink="https://www.instagram.com/p/DMHqb88MSKR/"
+    data-instgrm-version="14"
+    style="background:#FFF; border:0; margin:1rem auto; max-width:540px; width:100%;">
+  </blockquote>
+<ul></ul>
+    <blockquote class="instagram-media"
+    data-instgrm-permalink="https://www.instagram.com/reel/DLYsE_DhneE/"
+    data-instgrm-version="14"
+    style="background:#FFF; border:0; margin:1rem auto; max-width:540px; width:100%;">
+  </blockquote>
+
+</section>
+
+<script src="https://www.instagram.com/embed.js"></script>
+
+ 
 
 <footer>
   <div class="social-icons">
@@ -321,7 +342,25 @@
 
   &copy; 2025 R4DIANT VOID — All rights reserved
 </footer>
+  <script>
+  window.addEventListener('load', function () {
+    const container = document.getElementById('instagram-embed-container');
+    container.innerHTML = `
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DMHqb88MSKR/"
+        data-instgrm-version="14"
+        style="margin: 1rem auto; max-width: 540px; min-width: 326px;">
+      </blockquote>
+    `;
 
+    const script = document.createElement('script');
+    script.src = "//www.instagram.com/embed.js";
+    script.onload = () => {
+      if (window.instgrm) window.instgrm.Embeds.process();
+    };
+    document.body.appendChild(script);
+  });
+</script>
   <script>
     function toggleMute() {
       const video = document.getElementById('mainVideo');
